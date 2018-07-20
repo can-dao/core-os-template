@@ -1,14 +1,12 @@
 {
-  "name": "candao_project_template",
+  "name": "{{ name }}",
   "version": "1.0.0",
-  "description": "a template project for create new project. ",
-  "author": "jaywang <jaywang@can-dao.com>",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
+    "dev": "HOST=0.0.0.0 PORT={{ port }} nuxt",
+    "build": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },

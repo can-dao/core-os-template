@@ -7,7 +7,8 @@
         
       <p><nuxt-link to="/index">Index</nuxt-link></p>
       <p><nuxt-link to="/userCenter">UserCenter</nuxt-link></p>
-      <p><nuxt-link to="/Booking">Booking</nuxt-link></p>
+      <p><nuxt-link to="/booking">Booking</nuxt-link></p>
+      <p><nuxt-link to="/helper">Helper</nuxt-link></p>
     </div>
   </div>
   <div id="main">
