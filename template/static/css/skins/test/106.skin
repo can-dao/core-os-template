@@ -1,0 +1,3 @@
+#footer::before{
+	content:"post:106.skin"
+}
