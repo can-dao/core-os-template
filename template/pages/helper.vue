@@ -1,5 +1,7 @@
 <template>
   <div>
+
+    <p>{{ test }}</p>
     <p>{{ '测试'|L }}</p>
     <p>{{ '--测试--'|L }}</p>
     <p>{{ '--测试--'|L('en') }}</p>
@@ -24,7 +26,9 @@
 <script>
 export default {
   data(){
-    return {};
+    return {
+      test:123
+    };
   },
   created(){
     
