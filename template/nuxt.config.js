@@ -80,7 +80,6 @@ module.exports = {
     {src:'~/plugins/init',ssr:false}, //os项目的初始化
     {src:'~/plugins/server',ssr:false}, //请求服务端接口方法
     {src:'~/plugins/lang',ssr:false}, //全局语言包初始化
-    {src:'~/plugins/skin',ssr:false}, //同一项目下的皮肤解决方案 待加
   ],
 
   router: {
