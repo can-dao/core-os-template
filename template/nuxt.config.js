@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: '网站名称',
+    title: '项目名称',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width,height=device-height' },
@@ -13,8 +13,19 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script:[
-      //{src:"https://cdn.bootcss.com/jquery/3.3.1/core.js"}
+      //{src:"https://cdn.bootcss.com/jquery/3.3.1/core.js"} //引入第三方JS
     ]
+  },
+
+  css:[
+    './../../static/css/reset.css',
+    './../../static/css/common.less',
+    '~/static/css/reset.css',
+    '~/static/css/common.less'
+  ],
+
+  transition: {
+    name: 'fade'
   },
 
   parser: 'babel-eslint',
@@ -43,6 +54,9 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      if (isClient) {
+        config.devtool = 'eval-source-map'
+      }
     },
 
     babel: {
@@ -50,6 +64,14 @@ module.exports = {
       ,plugins:[
         'transform-runtime'
       ]
+    },
+
+    filenames:{
+      css: 'common.[contenthash].css',
+      manifest: 'manifest.[hash].js',
+      vendor: 'common.[chunkhash].js',
+      app: 'app.[chunkhash].js',
+      chunk: '[name].[chunkhash].js'
     }
 
   },
@@ -73,7 +95,7 @@ module.exports = {
     [
       '/*',
       { 
-        target: 'http://qc.can-dao.com:106', // QC环境的地址 这里用的是标准版的
+        target: 'http://qc.can-dao.com:{{ port }}', // QC环境的地址 这里用的是标准版的
         //pathRewrite: { '^/' : '/' } //一般不用这个配置 除非有特定的接口
       }
     ]

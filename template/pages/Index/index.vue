@@ -1,6 +1,6 @@
 <template>
-  <div>
-    Booking
+  <div class="base-wrap">
+    index/index
   </div>
 </template>
 

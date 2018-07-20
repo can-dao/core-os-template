@@ -1,6 +1,6 @@
 <template>
-  <div>
-    Booking
+  <div class="base-wrap">
+    userCenter/index
   </div>
 </template>
 
@@ -10,7 +10,6 @@ export default {
     return {};
   },
   created(){
-    
 
   },
   methods:{

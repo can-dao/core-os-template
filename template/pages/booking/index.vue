@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div class="base-wrap">
+    booking/index
+  </div>
 </template>
 
 <script>
@@ -8,9 +10,7 @@ export default {
     return {};
   },
   created(){
-
-    //这一页仅作过渡.
-    this.$router.push('index');
+    
 
   },
   methods:{

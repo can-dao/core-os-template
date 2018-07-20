@@ -21,6 +21,12 @@ module.exports = {
       'message': 'Author',
       'default': 'jaywang@can-dao.com'
     },
+    port: {
+      'type': 'Number',
+      'required': true,
+      'message': 'qc.can-dao.com:*** \'s port:',
+      'default': '106'
+    },
   },
   completeMessage: '{{#inPlace}}To get started:\n\n  npm install \n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install \n  npm run dev{{/inPlace}}'
 };
