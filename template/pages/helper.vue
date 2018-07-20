@@ -2,9 +2,9 @@
   <div>
 
     <p>{{ test }}</p>
-    <p>{{ '测试'|L }}</p>
-    <p>{{ '--测试--'|L }}</p>
-    <p>{{ '--测试--'|L('en') }}</p>
+    <p>{{ keyName|L }}</p>
+    <p>{{ '--'+keyName+'--'|L }}</p>
+    <p>{{ '--'+keyName+'--'|L('en') }}</p>
 
     <h1>LANG.js 示例</h1>
     <a href="javascript:void(0)" @click="toggleLang('zh')">ZH</a> | 
@@ -27,7 +27,7 @@
 export default {
   data(){
     return {
-      test:123
+      keyName:"测试"
     };
   },
   created(){
