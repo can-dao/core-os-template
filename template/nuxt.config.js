@@ -10,7 +10,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'coco' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      //{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script:[
       //{src:"https://cdn.bootcss.com/jquery/3.3.1/core.js"} //引入第三方JS
@@ -54,6 +54,33 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+
+      config.module.rules.push({
+        test: /\.(png|jpe?g|gif|svg)$/,
+        loader: 'url-loader',
+        query: {
+          limit: 1000, // 1kB
+          name: 'img/[name].[hash:7].[ext]'
+        }
+      });
+      config.module.rules.push({
+        test: /\.(ico)$/,
+        loader: 'file-loader',
+        query: {
+          name: 'img/[name].[hash:7].[ext]'
+        }
+      });
+
+      config.module.rules.push({
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        query: {
+          limit: 1000, // 1kB
+          name: 'fonts/[name].[hash:7].[ext]'
+        }
+      });
+
+      
       if (isClient) {
         config.devtool = 'eval-source-map'
       }

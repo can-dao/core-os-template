@@ -8,21 +8,24 @@ const lib = []
 // 二级域名则全称 如 m.can-dao.com
 
 // /*匹配链接上的key*/
-// import skin1 from "text-loader!../static/css/skins/test/key.skin";
 // lib.push({
-//   type:"key",list:["b15ae13796ea20b4"],content:skin1
+//   type:"key",list:["b15ae13796ea20b4"],content:require("text-loader!../static/css/skins/test/key.skin"),
+// 			//favicos:require("~/static/favicon1.ico") //全部都是 favicon1.ico
+// 			/* 针对不同 key */
+// 			// favicos:{
+// 			// 	"b15ae13796ea20b4":require("~/static/favicon1.ico"),
+// 			// 	"123456":require("~/static/favicon2.ico")
+// 			// }
 // })
 
 // /*匹配域名*/
-// import skin2 from "text-loader!../static/css/skins/test/localhost.skin";
 // lib.push({
-//   type:"host",list:["localhost","4008-197-197.com","m.can-dao.com"],content:skin2
+//   type:"host",list:["localhost","4008-197-197.com","m.can-dao.com"],content:require("text-loader!../static/css/skins/test/localhost.skin")
 // })
 
 // /*匹配端口号 一般只在开发的时候使用*/
-// import skin3 from "text-loader!../static/css/skins/test/106.skin";
 // lib.push({
-//   type:"port",list:["106",""/*空为80端口*/],content:skin3
+//   type:"port",list:["106",""/*空为80端口*/],content:require("text-loader!../static/css/skins/test/106.skin")
 // })
 
 export default lib;
